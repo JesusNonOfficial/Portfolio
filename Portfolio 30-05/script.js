@@ -78,21 +78,30 @@ button1.addEventListener('mouseout', () => {
 
 
 
-// ----------- page 3-------------- //
+// ----------- SCROLL ANIMATIONS-------------- //
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         console.log(entry)
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            entry.target.classList.add('translateX-show');
+            entry.target.classList.add('translateY-show');
+            entry.target.classList.add('scale-show');
         }
         else {
-            entry.target.classList.remove('show');
+            entry.target.classList.remove('translateX-show');
+            entry.target.classList.remove('translateY-show');
+            entry.target.classList.remove('scale-show');
         }
     });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+const translateXhiddenElements = document.querySelectorAll('.translateX-hidden');
+const translateYhiddenElements = document.querySelectorAll('.translateY-hidden');
+const scalehiddenElements = document.querySelectorAll('.scale-hidden');
+translateXhiddenElements.forEach((el) => observer.observe(el));
+translateYhiddenElements.forEach((el) => observer.observe(el));
+scalehiddenElements.forEach((el) => observer.observe(el));
 
 
 
@@ -114,3 +123,4 @@ rightArrow.addEventListener('click', function() {
 leftArrow.addEventListener('click', function() {
   slidesContainer.scrollBy({ left: -600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
 });
+
