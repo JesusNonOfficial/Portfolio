@@ -107,19 +107,15 @@ scalehiddenElements.forEach((el) => observer.observe(el));
 
 // CAROUSSEL 
 
-// Get the slides container element
-var slidesContainer = document.querySelector('.slides');
 
-// Get the right and left arrow elements
+var slidesContainer = document.querySelector('.slides');
 var rightArrow = document.querySelector('.right-arrow');
 var leftArrow = document.querySelector('.left-arrow');
 
-// Scroll to the right when right arrow is clicked
 rightArrow.addEventListener('click', function() {
   slidesContainer.scrollBy({ left: 600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
 });
 
-// Scroll to the left when left arrow is clicked
 leftArrow.addEventListener('click', function() {
   slidesContainer.scrollBy({ left: -600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
 });

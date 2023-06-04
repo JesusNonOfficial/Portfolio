@@ -15,7 +15,7 @@ html {
 .translateX-hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-80%);
+  transform: translateX(-100%);
   transition: all 0.5s ease;
 }
 
@@ -28,7 +28,7 @@ html {
 .translateY-hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateY(80%);
+  transform: translateY(50%);
   transition: all 0.5s ease;
 }
 .translateY-show {
@@ -154,7 +154,6 @@ header * {
   }
 
   .dropdown-nav a {
-    font-family: "JetBrains Mono", monospace;
     position: relative;
     font-size: 1.5em;
     color: #162938;
@@ -171,7 +170,6 @@ header * {
 }
 
 .navigation a {
-  font-family: "JetBrains Mono", monospace;
   position: relative;
   font-size: 1.1em;
   color: #162938;
@@ -213,7 +211,6 @@ header * {
   color: #36395a;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -464,7 +461,6 @@ header * {
   color: #d5943e;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.24px;
@@ -805,6 +801,7 @@ header * {
 .card .image-container img {
   border-radius: 20px;
   width: 100%;
+  background: linear-gradient(225deg, rgb(183, 220, 255, 0.5) 0%, rgb(255, 164, 246, 0.5) 100%);
 }
 
 .card .text-container {
