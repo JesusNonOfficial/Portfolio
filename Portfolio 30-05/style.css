@@ -13,7 +13,7 @@ html {
 
 /* scrolling animations */
 .translateX-hidden {
-  opacity: 1;
+  opacity: 0;
   filter: blur(5px);
   transform: translateX(-80%);
   transition: all 0.5s ease;
@@ -577,6 +577,8 @@ header * {
 }
 
 .space-room {
+  /* box-shadow: 0 0 20px black; */
+  filter: drop-shadow(0 0 20px #fff);
   grid-row: 1/3;
   grid-column: 2;
   width: 100%;
