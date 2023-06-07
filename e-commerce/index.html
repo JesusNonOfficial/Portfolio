@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="page1">
+        <div class="bck">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 450" opacity="1">
+                <defs>
+                    <filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feGaussianBlur stdDeviation="10" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic"
+                            edgeMode="none" result="blur"></feGaussianBlur>
+                    </filter>
+                </defs>
+                <g filter="url(#bbblurry-filter)">
+                    <ellipse rx="166.5" ry="167.5" cx="632.892861106179" cy="269.91476162997157"
+                        fill="rgba(133,255,189,1)"></ellipse>
+                    <ellipse rx="166.5" ry="167.5" cx="132.35819175026631" cy="110.28119659423827"
+                        fill="rgba(255,251,125,1)"></ellipse>
+                </g>
+            </svg>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="slide" id="slide1">
+                    <div class="left-container">
+                        <h2>Our latest drink</h2>
+                        <div class="description">
+                            <h3>Citrus Breeze Mocktail</h3>
+                            <p>Experience a burst of refreshing flavors with our Citrus Breeze Mocktail. This vibrant
+                                concoction
+                                combines freshly squeezed oranges, tangy grapefruit, and a hint of zesty lime, creating
+                                a
+                                perfectly balanced and revitalizing drink. With its invigorating citrus notes and a
+                                subtle
+                                sweetness, this drink is the ultimate thirst-quencher on a hot summer day. Take a sip
+                                and
+                                let
+                                the cool, crisp flavors transport you to a beautiful sun-kissed paradise.</p>
+                        </div>
+                    </div>
+                    <div class="right-container">
+                        <img src="/e-commerce/img/lastest-drink.png" width="400" height="600" alt="">
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="left-container">
+                        <img src="https://placehold.co/1100x700" alt="">
+                    </div>
+                    <div class="right-container">
+                        <h2>A Refreshing Experience !</h2>
+                        <p>Immerse yourself in a truly refreshing experience with our drinks. From the first sip to
+                            the
+                            last, our beverages are crafted to invigorate your senses and quench your thirst like
+                            never
+                            before. Feel the coolness as the bubbles tickle your palate and the vibrant flavors
+                            dance on
+                            your taste buds. Each sip is a moment of pure refreshment, transporting you to a world
+                            of
+                            revitalizing sensations. Whether you're seeking a tropical escape, a burst of citrus
+                            zest,
+                            or a creamy indulgence, our drinks deliver the perfect balance of flavors and an
+                            unrivaled
+                            refreshment that will leave you craving more. Get ready to awaken your taste buds and
+                            elevate your thirst-quenching experience to new heights</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide3">
+                    <div class="top-container">
+                        <h2>Unique Flavors</h2>
+                        <p>Unleash your taste buds with our one-of-a-kind flavors. Experience a symphony of taste
+                            that
+                            pushes boundaries and sparks delight. From unexpected combinations to exotic
+                            inspirations,
+                            our beverages offer a flavor journey you won't find anywhere else. Discover the
+                            extraordinary and embrace a world of delicious surprises.</p>
+                    </div>
+                    <div class="bottom-container">
+                        <div class="drinks-grid">
+                            <div class="card">
+                                <h2>Sparkling Raspberry Lemonade</h2>
+                                <p>A delightful blend of tangy lemons and ripe raspberries, fizzing with refreshing
+                                    bubbles. Sip away the summer heat with this sparkling twist on a classic
+                                    lemonade.
+                                </p>
+                            </div>
+                            <div class="card">
+                                <h2>Tropical Paradise Punch</h2>
+                                <p>Dive into a tropical oasis with this vibrant punch. A medley of juicy pineapple,
+                                    luscious mango, and a splash of zesty citrus, creating a taste of paradise in
+                                    every
+                                    sip.</p>
+                            </div>
+                            <div class="card">
+                                <h2>Creamy Caramel Swirl</h2>
+                                <p>Indulge your senses with this velvety smooth concoction. Rich caramel swirls
+                                    dance
+                                    with a creamy base, creating a heavenly treat that melts in your mouth.</p>
+                            </div>
+                            <div class="card">
+                                <h2>Zesty Ginger Limeade</h2>
+                                <p> Energize your taste buds with this invigorating blend of zesty lime and fiery
+                                    ginger. A burst of citrus tang combined with a hint of spice, this drink will
+                                    awaken
+                                    your senses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <a class="nav-link" data-slide="1"></a>
+                <a class="nav-link" data-slide="2"></a>
+                <a class="nav-link" data-slide="3"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page2"></section>
+
+</body>
+
+</html>
