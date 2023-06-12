@@ -690,7 +690,7 @@ span {
 
 .about-drinks {
     position: relative;
-    background-image: url(/e-commerce/img/lastest-drink.png);
+    background-image: url(e-commerce-img/lastest-drink.png);
     background-repeat: no-repeat;
     background-size: 45%;
     background-position: 0% 100%;
