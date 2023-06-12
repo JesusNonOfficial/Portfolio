@@ -1,3 +1,30 @@
+
+
+// ----------- SCROLL ANIMATIONS-------------- //
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('translateX-show');
+      entry.target.classList.add('translateY-show');
+      entry.target.classList.add('scale-show');
+    }
+    else {
+      entry.target.classList.remove('translateX-show');
+      entry.target.classList.remove('translateY-show');
+      entry.target.classList.remove('scale-show');
+    }
+  });
+});
+
+const translateXhiddenElements = document.querySelectorAll('.translateX-hidden');
+const translateYhiddenElements = document.querySelectorAll('.translateY-hidden');
+const scalehiddenElements = document.querySelectorAll('.scale-hidden');
+translateXhiddenElements.forEach((el) => observer.observe(el));
+translateYhiddenElements.forEach((el) => observer.observe(el));
+scalehiddenElements.forEach((el) => observer.observe(el));
+
 const slider = document.querySelector('.slider');
 const navLinks = document.querySelectorAll('.nav-link');
 let autoplayInterval;
@@ -50,10 +77,73 @@ slider.addEventListener('click', () => {
 });
 
 // Stop autoplay on mouseenter and start it again on mouseleave
-slider.addEventListener('mouseenter', () => {
-    clearInterval(autoplayInterval);
-  });
-  
-  slider.addEventListener('mouseleave', () => {
-    autoplaySlider();
-  });
+slider.addEventListener('mouseover', () => {
+  clearInterval(autoplayInterval);
+});
+
+slider.addEventListener('mouseleave', () => {
+  autoplaySlider();
+});
+
+
+function ShowBubblyDrinks() {
+  var page3 = document.querySelector(".bubbly-drinks-grid");
+  page3.classList.toggle("show");
+}
+
+// JavaScript variables
+const carousel = document.querySelector('.drinks-container');
+const slides = Array.from(document.querySelectorAll('.slide'));
+
+let currentIndex = 0;
+const slideWidth = slides[0].offsetWidth;
+
+// Function to show the current slide
+function showSlide(index) {
+  carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+// Function to handle next slide
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex === slides.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+// Function to handle previous slide
+function prevSlide() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+}
+
+function ShowBubblyDrinks() {
+  document.querySelector('.drinks-type-menu').style.transform = 'translateX(100%)';
+  document.querySelector('.bubbly-drinks').style.transform = 'translateX(-100%)';
+}
+
+function ShowHotDrinks() {
+  document.querySelector('.drinks-type-menu').style.transform = 'translateX(-100%)';
+  document.querySelector('.hot-drinks').style.transform = 'translateX(-200%)';
+}
+
+function ShowDrinksMenu() {
+  document.querySelector('.drinks-type-menu').style.transform = 'translateX(0)';
+  document.querySelector('.bubbly-drinks').style.transform = 'translateX(-200%)';
+  document.querySelector('.hot-drinks').style.transform = 'translateX(-100%)';
+}
+
+
+
+const box = document.querySelector('.about-drinks')
+slider.addEventListener('click', () => {
+  box.classList.add('instet-shadow');
+});
+
+slider.addEventListener('mouseleave', () => {
+  box.classList.remove('instet-shadow');
+});

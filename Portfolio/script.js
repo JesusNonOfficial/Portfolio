@@ -112,11 +112,11 @@ var slidesContainer = document.querySelector('.slides');
 var rightArrow = document.querySelector('.right-arrow');
 var leftArrow = document.querySelector('.left-arrow');
 
-rightArrow.addEventListener('click', function() {
-  slidesContainer.scrollBy({ left: 600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
+rightArrow.addEventListener('click', function () {
+    slidesContainer.scrollBy({ left: 600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
 });
 
-leftArrow.addEventListener('click', function() {
-  slidesContainer.scrollBy({ left: -600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
+leftArrow.addEventListener('click', function () {
+    slidesContainer.scrollBy({ left: -600, behavior: 'smooth' }); // Adjust the scrollBy value as per your slide width
 });
 

@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
-    <title>Document</title>
+    <title>BubblyBliss | Home</title>
 </head>
 
 <body>
+
     <section class="page1">
         <div class="bck">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -31,10 +32,21 @@
                 </g>
             </svg>
         </div>
-        <div class="slider-wrapper">
+        <div class="top-container">
+            <h1 class="scale-hidden">BubblyBliss</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, eos delectus. Adipisci esse saepe laborum
+                temporibus eaque quaerat dicta sunt minus mollitia voluptate, cum recusandae minima vitae neque
+                assumenda voluptatum tenetur dolorum placeat perferendis possimus sapiente obcaecati aliquid odit! Illum
+                itaque minus ea suscipit dolor beatae, fugit quae! Est, deserunt!</p>
+            <a href="#first-page" class="scale-hidden">Continue</a>
+        </div>
+        <nav class="vertical-nav">
+
+        </nav>
+        <div class="slider-wrapper" id="first-page">
             <div class="slider">
                 <div class="slide" id="slide1">
-                    <div class="left-container">
+                    <div class="left-container translateX-hidden">
                         <h2>Our latest drink</h2>
                         <div class="description">
                             <h3>Citrus Breeze Mocktail</h3>
@@ -52,13 +64,14 @@
                     </div>
                     <div class="right-container">
                         <img src="/e-commerce/img/lastest-drink.png" width="400" height="600" alt="">
+                        <a href="#second-page" class="blue-buttons"> Shop now</a>
                     </div>
                 </div>
                 <div class="slide" id="slide2">
                     <div class="left-container">
                         <img src="https://placehold.co/1100x700" alt="">
                     </div>
-                    <div class="right-container">
+                    <div class="right-container translateY-hidden">
                         <h2>A Refreshing Experience !</h2>
                         <p>Immerse yourself in a truly refreshing experience with our drinks. From the first sip to
                             the
@@ -74,6 +87,7 @@
                             unrivaled
                             refreshment that will leave you craving more. Get ready to awaken your taste buds and
                             elevate your thirst-quenching experience to new heights</p>
+                        <a href="#second-page" class="blue-buttons"> Shop now</a>
                     </div>
                 </div>
                 <div class="slide" id="slide3">
@@ -85,31 +99,33 @@
                             inspirations,
                             our beverages offer a flavor journey you won't find anywhere else. Discover the
                             extraordinary and embrace a world of delicious surprises.</p>
+                        <a href="#second-page" class="blue-buttons"> Shop now</a>
                     </div>
                     <div class="bottom-container">
-                        <div class="drinks-grid">
+                        <div class="featured-drinks-grid">
                             <div class="card">
-                                <h2>Sparkling Raspberry Lemonade</h2>
+                                <h3>Sparkling Raspberry Lemonade</h3>
                                 <p>A delightful blend of tangy lemons and ripe raspberries, fizzing with refreshing
                                     bubbles. Sip away the summer heat with this sparkling twist on a classic
                                     lemonade.
                                 </p>
                             </div>
                             <div class="card">
-                                <h2>Tropical Paradise Punch</h2>
+                                <h3>Tropical Paradise Punch</h3>
                                 <p>Dive into a tropical oasis with this vibrant punch. A medley of juicy pineapple,
                                     luscious mango, and a splash of zesty citrus, creating a taste of paradise in
                                     every
                                     sip.</p>
                             </div>
                             <div class="card">
-                                <h2>Creamy Caramel Swirl</h2>
+                                <h3>Creamy Caramel Swirl</h3>
                                 <p>Indulge your senses with this velvety smooth concoction. Rich caramel swirls
                                     dance
                                     with a creamy base, creating a heavenly treat that melts in your mouth.</p>
+                                <div id="hot">hot</div>
                             </div>
                             <div class="card">
-                                <h2>Zesty Ginger Limeade</h2>
+                                <h3>Zesty Ginger Limeade</h3>
                                 <p> Energize your taste buds with this invigorating blend of zesty lime and fiery
                                     ginger. A burst of citrus tang combined with a hint of spice, this drink will
                                     awaken
@@ -127,7 +143,194 @@
         </div>
     </section>
 
-    <section class="page2"></section>
+
+    <!-- -------------------------------PAGE 2------------------------------- -->
+    <section class="page2" id="second-page">
+        <section class="drinks-wrapper">
+
+            <section class="drinks-type-menu">
+                <h2 class="scale-hidden">Our drinks</h2>
+                <div class="bubbly-drinks-container">
+                    <h3 class="scale-hidden">Bubbly Drinks</h3>
+                    <img src="https://placehold.co/400x600" alt="">
+                    <a onclick="ShowBubblyDrinks()" class="blue-buttons">see drinks</a>
+                </div>
+                <div class="hot-drinks-container">
+                    <h3 class="scale-hidden">Hot Drinks</h3>
+                    <img src="https://placehold.co/400x600" alt="">
+                    <a onclick="ShowHotDrinks()" class="blue-buttons">see drinks</a>
+                </div>
+            </section>
+            <section class="bubbly-drinks">
+                <div class="bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 450">
+                        <defs>
+                            <filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%"
+                                filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feGaussianBlur stdDeviation="40" x="0%" y="0%" width="100%" height="100%"
+                                    in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur>
+                            </filter>
+                        </defs>
+                        <g filter="url(#bbblurry-filter)">
+                            <ellipse rx="150" ry="150" cx="542.2044011896307" cy="187.7294561212713"
+                                fill="rgba(255, 251, 125, 1.00)"></ellipse>
+                            <ellipse rx="150" ry="150" cx="290.0775229714133" cy="298.0072576349432"
+                                fill="hsla(148, 100%, 76%, 1.00)"></ellipse>
+                        </g>
+                    </svg>
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <a onclick="ShowDrinksMenu()" class="green-buttons">Back to selection</a>
+            </section>
+
+            <section class="hot-drinks">
+                <div class="bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 450">
+                        <defs>
+                            <filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%"
+                                filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feGaussianBlur stdDeviation="40" x="0%" y="0%" width="100%" height="100%"
+                                    in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur>
+                            </filter>
+                        </defs>
+                        <g filter="url(#bbblurry-filter)">
+                            <ellipse rx="150" ry="150" cx="542.2044011896307" cy="187.7294561212713" fill="#d09259">
+                            </ellipse>
+                            <ellipse rx="150" ry="150" cx="290.0775229714133" cy="298.0072576349432" fill="#78380c">
+                            </ellipse>
+                        </g>
+                    </svg>
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>Title</h2>
+                    <img src="/e-commerce/img/lastest-drink.png" alt="">
+                </div>
+                <a onclick="ShowDrinksMenu()" class="brown-buttons">Back to selection</a>
+            </section>
+
+        </section>
+    </section>
+    <section class="page3" id="page3">
+        <div class="about-drinks">
+        
+            <h2>About The Drinks
+
+            </h2>
+            <div class="bottom-container">
+                <p>• Recicled • Natural Flavours • Vegan • </p>
+                <p>Introducing our exquisite collection of drinks, crafted with care to bring joy and refreshment to
+                    every
+                    sip. From the vibrant Sparkling Raspberry Lemonade to the tropical escape of the Tropical Paradise
+                    Punch, each flavor is meticulously blended to perfection.
+                </p>
+
+                <p>Discover the perfect companion for any occasion, as our drinks are designed to captivate and delight.
+                    Elevate your beverage experience with our range of exceptional flavors and experience a world of
+                    pure
+                    and refreshing sensations.
+                </p>
+                <span></span>
+            </div>
+
+        </div>
+        <div class="about-us">
+            <div class="bck">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800">
+                    <g id="about-us-bck" stroke-width="11" stroke="" id="cloud">
+                        <path
+                            d="M 36.910990370505715 631.675418873732 A  50 50 0 1 1 343.45550425264844 507.85337565956314 A  50 50 0 1 1 554.188499730295 405.23561631447353 A  50 50 0 1 1 679.8429488736297 309.4240724254029 A  50 50 0 1 1 982.1989950609457 416.7539064896668 A  50 50 0 1 1 830.6282693753067 735.6020868910543 A  50 50 0 1 1 242.14659685863876 902.3560209424083 A  50 50 0 1 1 36.910990370505715 631.675418873732 Z"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </div>
+            <h2>About Us</h2>
+            <h2>BubblyBliss</h2>
+            <div class="bottom-container">
+                <div class="bck">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 600 400">
+                        <g id="blue-triangle">
+                            <path
+                                d="M167.12603915698026 105.11810824213035C189.56698255704535 62.40157585280744 327.7559550301899 123.22834917840964 378.54335177905057 138.18897768793113C429.3307485279112 153.1496061974526 479.72443291511826 147.04723879632957 471.8504196501443 194.88187929925925C463.9764063851704 242.71651980218894 369.29139356778757 391.9291052514077 331.2992721892068 425.19682070550925C293.30715081062607 458.4645361596108 271.25989688403104 447.8346241010984 243.89769137865994 394.48817202386863C216.53548587328885 341.14171994663883 144.68509575691513 147.83464063145325 167.12603915698026 105.11810824213035C189.56698255704535 62.40157585280744 327.7559550301899 123.22834917840964 378.54335177905057 138.18897768793113 ">
+                            </path>
+                        </g>
+                        <g id="pink-triangle">
+                            <path
+                                d="M85.45224188208817 97.47099583946368C107.89318528215327 54.754463450140776 246.08215775529783 115.58123677574298 296.8695545041585 130.54186528526446C347.65695125301914 145.50249379478595 398.05063564022623 139.4001263936629 390.17662237525224 187.2347668965926C382.30260911027835 235.06940739952228 287.6175962928955 384.281992848741 249.62547491431474 417.5497083028426C211.633353535734 450.81742375694415 189.58609960913896 440.18751169843176 162.22389410376786 386.84105962120196C134.86168859839677 333.49460754397217 63.01129848202305 140.1875282287866 85.45224188208817 97.47099583946368C107.89318528215327 54.754463450140776 246.08215775529783 115.58123677574298 296.8695545041585 130.54186528526446 "
+                                fill-opacity="1" opacity="1" stroke-opacity="1" stroke-width="0"
+                                stroke="hsl(340, 45%, 30%)"
+                                transform="matrix(1.0969943906250001,0,0,1.0969943906250001,55.82198233205662,46.84538131783313)">
+                            </path>
+                        </g>
+                        <g id="blue-triangle2">
+                            <path
+                                d="M167.12603915698026 105.11810824213035C189.56698255704535 62.40157585280744 327.7559550301899 123.22834917840964 378.54335177905057 138.18897768793113C429.3307485279112 153.1496061974526 479.72443291511826 147.04723879632957 471.8504196501443 194.88187929925925C463.9764063851704 242.71651980218894 369.29139356778757 391.9291052514077 331.2992721892068 425.19682070550925C293.30715081062607 458.4645361596108 271.25989688403104 447.8346241010984 243.89769137865994 394.48817202386863C216.53548587328885 341.14171994663883 144.68509575691513 147.83464063145325 167.12603915698026 105.11810824213035C189.56698255704535 62.40157585280744 327.7559550301899 123.22834917840964 378.54335177905057 138.18897768793113 ">
+                            </path>
+                        </g>
+                        <defs>
+                            <radialGradient id="SvgjsRadialGradient1000">
+                                <stop stop-color="hsl(340, 45%, 50%)" offset="0"></stop>
+                                <stop stop-color="hsl(340, 45%, 80%)" offset="1"></stop>
+                            </radialGradient>
+                            <linearGradient id="SvgjsLinearGradient1001" gradientTransform="rotate(269, 0.5, 0.5)">
+                                <stop stop-color="hsl(180, 69%, 40%)" offset="0"></stop>
+                                <stop stop-color="hsl(180, 69%, 90%)" offset="1"></stop>
+                            </linearGradient>
+                            <linearGradient id="SvgjsLinearGradient1002" gradientTransform="rotate(80, 0.5, 0.5)">
+                                <stop stop-color="hsl(340, 45%, 50%)" offset="0"></stop>
+                                <stop stop-color="hsl(340, 45%, 80%)" offset="1"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Welcome to BubblyBliss! </h3>
+                <p>
+                    We are passionate about crafting exceptional sodas that bring joy and
+                    refreshment to every moment. With a commitment to quality and a touch of magic, our carefully
+                    crafted flavors will tantalize your taste buds.
+                </p>
+                <p>
+                    Join us on this effervescent journey as we celebrate
+                    life and spread a little bubbly bliss. Cheers to unforgettable moments and refreshing bubbles!
+
+                </p>
+            </div>
+        </div>
+
+        </div>
+    </section>
 
 </body>
 
