@@ -139,11 +139,35 @@ function ShowDrinksMenu() {
 
 
 
-const box = document.querySelector('.about-drinks')
-slider.addEventListener('click', () => {
-  box.classList.add('instet-shadow');
+const AboutUsBox = document.querySelector('.about-us')
+const AboutDrinksBox = document.querySelector('.about-drinks')
+
+
+AboutUsBox.addEventListener("mouseover", function () {
+  AboutDrinksBox.classList.add("not-hover");
 });
 
-slider.addEventListener('mouseleave', () => {
-  box.classList.remove('instet-shadow');
+AboutUsBox.addEventListener('mouseout', () => {
+  AboutDrinksBox.classList.remove('not-hover');
+});
+
+const plane = document.getElementById('paper-plane');
+const bell = document.getElementById('bell');
+const message = document.getElementById('message');
+
+plane.addEventListener('mouseover', function () {
+  plane.classList.add('animated');
+});
+
+message.addEventListener('mousenter', function () {
+  message.classList.add('animated');
+});
+bell.addEventListener('mousenter', function () {
+  bell.classList.add('animated');
+});
+
+plane.addEventListener('mouseleave', function() {
+  setTimeout(function() {
+    plane.classList.remove('animated');
+  }, 1500); 
 });
